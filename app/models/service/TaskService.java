@@ -60,7 +60,7 @@ public final class TaskService {
         try {
             task.save();
             task.number = generateTaskNumber(task);
-            task.save();
+            task.update();
             transaction.commit();
             return task.id;
         } catch (PersistenceException exc) {

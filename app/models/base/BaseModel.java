@@ -14,14 +14,14 @@ import java.util.UUID;
 public abstract class BaseModel extends Model {
     @Column(name="create_time", nullable = false, columnDefinition = "DATETIME DEFAULT CURRENT_TIMESTAMP")
     @Formats.DateTime(pattern = "yyyy-MM-dd hh:mm:ss")
-    public Date createTime;
+    public Date createTime = new Date();
 
     @Column(name = "update_time", nullable = false, columnDefinition = "DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
     @Formats.DateTime(pattern = "yyyy-MM-dd hh:mm:ss")
-    public Date updateTime;
+    public Date updateTime = new Date();
 
     @Column(name = "uuid", nullable = false, columnDefinition = "DEFAULT NEWID()")
-    public String uuid;
+    public String uuid = UUID.randomUUID().toString();
 
     @PrePersist
     void createdAt() {

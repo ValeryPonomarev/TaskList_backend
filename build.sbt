@@ -13,7 +13,8 @@ libraryDependencies ++= Seq(
   cache,
   javaWs,
   evolutions,
-  "mysql" % "mysql-connector-java" % "5.1.18"
+  "mysql" % "mysql-connector-java" % "5.1.18",
+  filters
 )
 
 //play.Project.playJavaSettings

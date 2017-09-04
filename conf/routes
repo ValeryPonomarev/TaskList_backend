@@ -5,7 +5,7 @@ GET             /                                           controllers.DefaultC
 
 #Tasks
 GET             /api/v1/task/:id                            controllers.TaskController.get(id: Integer)
-POST            /api/v1/task/                               controllers.TaskController.find()
+POST            /api/v1/task/find/                          controllers.TaskController.find()
 POST            /api/v1/task/                               controllers.TaskController.add()
 PUT             /api/v1/task/:id                            controllers.TaskController.edit(id: Integer)
 DELETE          /api/v1/task/:id                            controllers.TaskController.remove(id: Integer)
